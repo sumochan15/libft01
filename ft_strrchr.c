@@ -1,29 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymorimot <ymorimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/28 03:07:47 by ymorimot          #+#    #+#             */
-/*   Updated: 2022/05/03 00:13:33 by ymorimot         ###   ########.fr       */
+/*   Created: 2022/05/07 05:25:27 by ymorimot          #+#    #+#             */
+/*   Updated: 2022/05/07 05:28:26 by ymorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-char	*ft_strchr(const char *s, int c)
-{
-	char	*check_s;
-	char	serch_c;
+size_t	ft_strlen(const char *str);
 
-	check_s = (char *)s;
-	serch_c = (char)c;
-	while (*check_s != serch_c && *check_s != '\0')
-		check_s++;
-	if (*check_s == '\0' && serch_c != '\0')
-	{
+char	*ft_strrchr(const char *s, int c)
+{
+	size_t	len_s;
+
+	len_s = (unsigned char)ft_strlen(s);
+	if (len_s == 0)
 		return (NULL);
+	while (len_s > 0)
+	{
+		if ((unsigned char)s[len_s - 1] == (unsigned char)c)
+			return ((char *)&s[len_s - 1]);
+		len_s--;
 	}
-	return (check_s);
+	return (NULL);
+}
+
+size_t	ft_strlen(const char *str)
+{
+	size_t	len;
+
+	len = 0;
+	while (str[len] != '\0')
+		len++;
+	return (len + 1);
 }
