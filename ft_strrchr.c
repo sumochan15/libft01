@@ -6,13 +6,21 @@
 /*   By: ymorimot <ymorimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 05:25:27 by ymorimot          #+#    #+#             */
-/*   Updated: 2022/05/07 05:28:26 by ymorimot         ###   ########.fr       */
+/*   Updated: 2022/05/25 02:33:58 by ymorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-size_t	ft_strlen(const char *str);
+size_t	ft_strlen(const char *str)
+{
+	size_t	len;
+
+	len = 0;
+	while (str[len] != '\0')
+		len++;
+	return (len + 1);
+}
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -28,14 +36,4 @@ char	*ft_strrchr(const char *s, int c)
 		len_s--;
 	}
 	return (NULL);
-}
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	len;
-
-	len = 0;
-	while (str[len] != '\0')
-		len++;
-	return (len + 1);
 }
