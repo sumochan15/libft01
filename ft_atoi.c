@@ -6,7 +6,7 @@
 /*   By: ymorimot <ymorimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 04:56:33 by ymorimot          #+#    #+#             */
-/*   Updated: 2022/05/25 02:34:26 by ymorimot         ###   ########.fr       */
+/*   Updated: 2022/05/26 21:16:50 by ymorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@
 size_t	ft_is_space(char c)
 {
 	return ((c >= '\t' && c <= '\r') || c == ' ');
+}
+
+int	ft_isdigit(int c)
+{
+	return ('0' <= c && c <= '9');
 }
 
 char	*check_sign(char *u_str, int *sign)
@@ -33,9 +38,9 @@ char	*check_sign(char *u_str, int *sign)
 
 int	ft_atoi(const char *str)
 {
-	char			*u_str;
-	int				sign;
-	size_t			atoi_num;
+	char		*u_str;
+	int			sign;
+	long long	atoi_num;
 
 	u_str = (char *)str;
 	while (ft_is_space(*u_str))

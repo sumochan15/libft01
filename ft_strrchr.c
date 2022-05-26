@@ -6,7 +6,7 @@
 /*   By: ymorimot <ymorimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 05:25:27 by ymorimot          #+#    #+#             */
-/*   Updated: 2022/05/25 02:33:58 by ymorimot         ###   ########.fr       */
+/*   Updated: 2022/05/26 21:07:40 by ymorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ char	*ft_strrchr(const char *s, int c)
 	size_t	len_s;
 
 	len_s = (unsigned char)ft_strlen(s);
-	if (len_s == 0)
-		return (NULL);
 	while (len_s > 0)
 	{
 		if ((unsigned char)s[len_s - 1] == (unsigned char)c)
