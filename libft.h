@@ -6,7 +6,7 @@
 /*   By: ymorimot <ymorimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 23:11:22 by ymorimot          #+#    #+#             */
-/*   Updated: 2022/05/25 05:24:18 by ymorimot         ###   ########.fr       */
+/*   Updated: 2022/05/30 16:08:58 by ymorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
-size_t	ft_strlen(const char *str);
 int		ft_atoi(const char *str);
-int		ft_isdigit(int c);
 
 #endif

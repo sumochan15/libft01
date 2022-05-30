@@ -6,13 +6,13 @@
 /*   By: ymorimot <ymorimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 05:25:27 by ymorimot          #+#    #+#             */
-/*   Updated: 2022/05/26 21:07:40 by ymorimot         ###   ########.fr       */
+/*   Updated: 2022/05/30 18:52:11 by ymorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-size_t	ft_strlen(const char *str)
+static	size_t	ft_strlen2(const char *str)
 {
 	size_t	len;
 
@@ -26,10 +26,10 @@ char	*ft_strrchr(const char *s, int c)
 {
 	size_t	len_s;
 
-	len_s = (unsigned char)ft_strlen(s);
+	len_s = ft_strlen2(s);
 	while (len_s > 0)
 	{
-		if ((unsigned char)s[len_s - 1] == (unsigned char)c)
+		if (s[len_s - 1] == (unsigned char)c)
 			return ((char *)&s[len_s - 1]);
 		len_s--;
 	}
