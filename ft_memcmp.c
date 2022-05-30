@@ -6,7 +6,7 @@
 /*   By: ymorimot <ymorimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 16:39:52 by ymorimot          #+#    #+#             */
-/*   Updated: 2022/05/25 02:33:01 by ymorimot         ###   ########.fr       */
+/*   Updated: 2022/05/31 02:08:25 by ymorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (i < n)
 	{
 		if (u_s1[i] != u_s2[i])
-		{
 			return (u_s1[i] - u_s2[i]);
-		}
 		i++;
 	}
 	return (0);

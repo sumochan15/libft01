@@ -6,14 +6,14 @@
 /*   By: ymorimot <ymorimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 10:39:33 by ymorimot          #+#    #+#             */
-/*   Updated: 2022/05/30 19:18:43 by ymorimot         ###   ########.fr       */
+/*   Updated: 2022/05/31 02:09:11 by ymorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
 
-static	size_t	ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	len;
 

@@ -6,24 +6,24 @@
 /*   By: ymorimot <ymorimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 04:56:33 by ymorimot          #+#    #+#             */
-/*   Updated: 2022/05/30 17:14:18 by ymorimot         ###   ########.fr       */
+/*   Updated: 2022/05/31 02:21:57 by ymorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
 
-static	size_t	ft_is_space(char c)
+static size_t	ft_is_space(char c)
 {
-	return ((c >= '\t' && c <= '\r') || c == ' ');
+	return (('\t' <= c && c <= '\r') || c == ' ');
 }
 
-static	int	ft_isdigit(int c)
+static int	ft_isdigit(int c)
 {
 	return ('0' <= c && c <= '9');
 }
 
-static	char	*check_sign(char *u_str, int *sign)
+static char	*check_sign(char *u_str, int *sign)
 {
 	if (u_str[0] == '+')
 		return (u_str + 1);
