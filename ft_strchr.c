@@ -6,7 +6,7 @@
 /*   By: ymorimot <ymorimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/28 03:07:47 by ymorimot          #+#    #+#             */
-/*   Updated: 2022/05/31 02:08:47 by ymorimot         ###   ########.fr       */
+/*   Updated: 2022/05/31 02:27:53 by ymorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strchr(const char *s, int c)
 	{
 		if (s[i] == (unsigned char)c)
 			return ((char *)&s[i]);
-			i++;
+		i++;
 	}
 	return (NULL);
 }
