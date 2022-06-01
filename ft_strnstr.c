@@ -6,22 +6,11 @@
 /*   By: ymorimot <ymorimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 10:39:33 by ymorimot          #+#    #+#             */
-/*   Updated: 2022/05/31 02:09:11 by ymorimot         ###   ########.fr       */
+/*   Updated: 2022/06/01 12:25:05 by ymorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	len;
-
-	len = 0;
-	while (str[len] != '\0')
-		len++;
-	return (len);
-}
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {

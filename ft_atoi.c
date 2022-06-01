@@ -6,12 +6,11 @@
 /*   By: ymorimot <ymorimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 04:56:33 by ymorimot          #+#    #+#             */
-/*   Updated: 2022/05/31 02:21:57 by ymorimot         ###   ########.fr       */
+/*   Updated: 2022/06/02 04:21:07 by ymorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 static size_t	ft_is_space(char c)
 {
@@ -36,11 +35,36 @@ static char	*check_sign(char *u_str, int *sign)
 		return (u_str);
 }
 
+int	is_overflow(int current, int next, int sign)
+{
+	if (0 < sign)
+	{
+		if (current > INT_MAX / 10)
+			return (1);
+		current = current * 10;
+		if (current > INT_MAX - next)
+			return (1);
+		else
+			return (0);
+	}
+	if (0 > sign)
+	{
+		if (current * -1 < INT_MIN / 10)
+			return (1);
+		current = current * 10;
+		if (current * -1 < INT_MIN + next)
+			return (1);
+		else
+			return (0);
+	}
+	return (0);
+}
+
 int	ft_atoi(const char *str)
 {
-	char		*u_str;
-	int			sign;
-	long long	atoi_num;
+	char	*u_str;
+	int		sign;
+	int		atoi_num;
 
 	u_str = (char *)str;
 	while (ft_is_space(*u_str))
@@ -50,8 +74,32 @@ int	ft_atoi(const char *str)
 	atoi_num = 0;
 	while (ft_isdigit(*u_str))
 	{
+		if (is_overflow(atoi_num, *u_str - '0', sign))
+		{
+			if (sign > 0)
+				return ((int)LONG_MAX);
+			else
+				return ((int)LONG_MIN);
+		}
 		atoi_num = atoi_num * 10 + (*u_str - '0');
 		u_str++;
 	}
 	return ((int)(atoi_num * sign));
 }
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (void)
+{
+	const char	*str = " 1\0a678";
+	int			test1;
+	int			test2;
+
+	test1 = ft_atoi(str);
+	test2 = atoi(str);
+	printf("%-10s | %-d\n", "ft_atoi", test1);
+	printf("%-10s | %-d\n", "atoi", test2);
+}
+*/

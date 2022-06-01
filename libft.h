@@ -6,13 +6,15 @@
 /*   By: ymorimot <ymorimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 23:11:22 by ymorimot          #+#    #+#             */
-/*   Updated: 2022/05/31 02:09:21 by ymorimot         ###   ########.fr       */
+/*   Updated: 2022/06/02 04:22:39 by ymorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stddef.h>
+# include <string.h>
+# include <limits.h>
 
 int		ft_toupper(int c);
 int		ft_tolower(int c);

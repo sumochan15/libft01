@@ -1,44 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymorimot <ymorimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/28 03:07:47 by ymorimot          #+#    #+#             */
-/*   Updated: 2022/06/01 12:39:50 by ymorimot         ###   ########.fr       */
+/*   Created: 2022/04/20 10:23:26 by ymorimot          #+#    #+#             */
+/*   Updated: 2022/06/01 12:24:54 by ymorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+size_t	ft_strlen(const char *str)
 {
-	size_t	i;
-	size_t	len_s;
+	size_t	len;
 
-	i = 0;
-	len_s = ft_strlen(s) + 1;
-	while (i < len_s)
-	{
-		if (s[i] == (char)c)
-			return ((char *)&s[i]);
-		i++;
-	}
-	return (NULL);
+	len = 0;
+	while (str[len] != '\0')
+		len++;
+	return (len);
 }
-
-/*
-#include <stdio.h>
-
-int main(void)
-{
-	const char	*s = "abc 123def";
-	int			c = ' ';
-	
-	char *test1 = ft_strchr(s,c);
-	char *test2 = strchr(s,c);
-	printf("ft_strchr : %s\n", test1);
-	printf("libc : %s\n", test2);
-}
-*/
