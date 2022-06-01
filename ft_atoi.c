@@ -6,7 +6,7 @@
 /*   By: ymorimot <ymorimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 04:56:33 by ymorimot          #+#    #+#             */
-/*   Updated: 2022/06/02 04:21:07 by ymorimot         ###   ########.fr       */
+/*   Updated: 2022/06/02 04:31:24 by ymorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static char	*check_sign(char *u_str, int *sign)
 		return (u_str);
 }
 
-int	is_overflow(int current, int next, int sign)
+static int	is_overflow(int current, int next, int sign)
 {
 	if (0 < sign)
 	{
@@ -87,7 +87,7 @@ int	ft_atoi(const char *str)
 	return ((int)(atoi_num * sign));
 }
 
-/*
+// /*
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -102,4 +102,4 @@ int main (void)
 	printf("%-10s | %-d\n", "ft_atoi", test1);
 	printf("%-10s | %-d\n", "atoi", test2);
 }
-*/
+// */
