@@ -6,7 +6,7 @@
 /*   By: ymorimot <ymorimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 04:56:33 by ymorimot          #+#    #+#             */
-/*   Updated: 2022/06/02 04:31:24 by ymorimot         ###   ########.fr       */
+/*   Updated: 2022/06/02 04:34:44 by ymorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ int	ft_atoi(const char *str)
 	return ((int)(atoi_num * sign));
 }
 
-// /*
+/*
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -102,4 +102,4 @@ int main (void)
 	printf("%-10s | %-d\n", "ft_atoi", test1);
 	printf("%-10s | %-d\n", "atoi", test2);
 }
-// */
+*/
