@@ -6,7 +6,7 @@
 /*   By: ymorimot <ymorimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 10:39:33 by ymorimot          #+#    #+#             */
-/*   Updated: 2022/06/01 12:25:05 by ymorimot         ###   ########.fr       */
+/*   Updated: 2022/06/04 02:05:16 by ymorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,20 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
+
+/*
+#include <stdio.h>
+#include <string.h>
+int main(void)
+{
+	const char	*haystack = "12354abc456def";
+	// const char	*haystack = "\0";
+	const char	*needle = "54abc456def";
+	size_t		len = 10;
+	char *test1 = ft_strnstr(haystack, needle, len);
+	char *test2 = strnstr(haystack, needle, len);
+
+	printf("%-13s | %-10s\n", "ft_strnstr", test1);
+	printf("%-13s | %-10s\n", "libc_strnstr", test2);
+}
+*/

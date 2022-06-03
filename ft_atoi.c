@@ -6,7 +6,7 @@
 /*   By: ymorimot <ymorimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 04:56:33 by ymorimot          #+#    #+#             */
-/*   Updated: 2022/06/02 04:34:44 by ymorimot         ###   ########.fr       */
+/*   Updated: 2022/06/04 01:58:25 by ymorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,24 +35,24 @@ static char	*check_sign(char *u_str, int *sign)
 		return (u_str);
 }
 
-static int	is_overflow(int current, int next, int sign)
+static int	is_overflow(long current, long next, int sign)
 {
 	if (0 < sign)
 	{
-		if (current > INT_MAX / 10)
+		if (current > LONG_MAX / 10)
 			return (1);
 		current = current * 10;
-		if (current > INT_MAX - next)
+		if (current > LONG_MAX - next)
 			return (1);
 		else
 			return (0);
 	}
 	if (0 > sign)
 	{
-		if (current * -1 < INT_MIN / 10)
+		if (current * -1 < LONG_MIN / 10)
 			return (1);
 		current = current * 10;
-		if (current * -1 < INT_MIN + next)
+		if (current * -1 < LONG_MIN + next)
 			return (1);
 		else
 			return (0);
@@ -64,7 +64,7 @@ int	ft_atoi(const char *str)
 {
 	char	*u_str;
 	int		sign;
-	int		atoi_num;
+	long	atoi_num;
 
 	u_str = (char *)str;
 	while (ft_is_space(*u_str))
@@ -93,7 +93,7 @@ int	ft_atoi(const char *str)
 
 int main (void)
 {
-	const char	*str = " 1\0a678";
+	const char	*str = " 21474836471";
 	int			test1;
 	int			test2;
 
