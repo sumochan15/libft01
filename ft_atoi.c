@@ -6,7 +6,7 @@
 /*   By: ymorimot <ymorimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 04:56:33 by ymorimot          #+#    #+#             */
-/*   Updated: 2022/06/04 01:58:25 by ymorimot         ###   ########.fr       */
+/*   Updated: 2022/06/04 16:04:39 by ymorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ int	ft_atoi(const char *str)
 
 int main (void)
 {
-	const char	*str = " 21474836471";
+	const char	*str = "222222222222222222222222";
 	int			test1;
 	int			test2;
 
