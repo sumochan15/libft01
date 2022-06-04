@@ -6,7 +6,7 @@
 /*   By: ymorimot <ymorimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 10:39:33 by ymorimot          #+#    #+#             */
-/*   Updated: 2022/06/04 16:13:03 by ymorimot         ###   ########.fr       */
+/*   Updated: 2022/06/04 16:18:20 by ymorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	needle_len;
 
 	needle_len = ft_strlen(needle);
-	if (needle[0] == '\0')
+	if (needle_len == 0)
 		return ((char *)&haystack[0]);
 	i = 0;
 	while (i <= len && haystack[i] != '\0')
@@ -37,12 +37,15 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 #include <string.h>
 int main(void)
 {
-	const char	*haystack = NULL;
-	const char	*needle = "54ab";
-	size_t		len = 3;
+	// const char	*haystack = NULL;
+	// const char	*needle = "54ab";
+	// size_t		len = 3;
+	const char	*haystack = "123456678abd";
+	const char	*needle = "5667";
+	size_t		len = 10;
 	
-	// char *test1 = ft_strnstr(haystack, needle, len);
-	// printf("%-13s | %-10s\n", "ft_strnstr", test1);
+	char *test1 = ft_strnstr(haystack, needle, len);
+	printf("%-13s | %-10s\n", "ft_strnstr", test1);
 
 	char *test2 = strnstr(haystack, needle, len);
 	printf("%-13s | %-10s\n", "libc_strnstr", test2);
