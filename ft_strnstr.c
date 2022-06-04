@@ -6,7 +6,7 @@
 /*   By: ymorimot <ymorimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 10:39:33 by ymorimot          #+#    #+#             */
-/*   Updated: 2022/06/04 16:05:27 by ymorimot         ###   ########.fr       */
+/*   Updated: 2022/06/04 16:13:03 by ymorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,3 @@ int main(void)
 	printf("%-13s | %-10s\n", "libc_strnstr", test2);
 }
 */
-//libft unit tester
